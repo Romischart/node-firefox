@@ -23,7 +23,7 @@ and now you need to build the custom image and run the tests with docker volume 
 ```bash
 docker build -t testcafe-firefox .
 
-docker run -v /path/to/tests:/usr/src/app/testcafe testcafe-firefox:latest testcafe chrome:headless -s *.testcafe.js
+docker run -v /path/to/tests:/usr/src/app/testcafe testcafe-firefox:latest testcafe firefox:headless -s *.testcafe.js
 ```
 
 **Local testcafe example:**
