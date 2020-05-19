@@ -30,3 +30,14 @@ docker run -v /path/to/tests:/usr/src/app/testcafe testcafe-firefox:latest testc
 ```bash
 docker run -it -v /path/to/tests:/home/node romischart/node-firefox:latest yarn testcafe firefox:headless
 ```
+
+## Custom node version
+You can build your own image with your custom node version, you need only to pass `NODE_VERSION` argument at build time:
+
+```dockerfile
+FROM romischart/node-firefox:latest
+```
+
+```bash
+docker build . -t custom-node-version --build-arg NODE_VERSION=12.16.1
+```
