@@ -1,4 +1,5 @@
 FROM debian:buster-slim
+LABEL maintainer="info@romischart.de"
 
 ARG NODE_VERSION=12.16.3
 ENV NVM_DIR /usr/local/nvm
