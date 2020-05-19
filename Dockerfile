@@ -62,7 +62,6 @@ RUN apt-get -qyy autoremove \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
   && apt-get -qyy clean
 
-
 #================
 # Configure node user
 #================
@@ -86,8 +85,6 @@ ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN npm install --global yarn
-
-#RUN /usr/bin/env bash -c firefox --version
 
 USER node
 WORKDIR /home/node
