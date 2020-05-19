@@ -1,0 +1,13 @@
+sudo: required
+notifications:
+  email: false
+services:
+  - docker
+script:
+  - export IMAGE_NAME=romischart/node-firefox
+  - docker build -t $IMAGE_NAME .
+  - export FIREFOX_VERSION=$(docker run --entrypoint "firefox" $IMAGE_NAME -version | awk '{ print $3 }')
+after_success:
+  - docker login -u=$DOCKER_USER -p=$DOCKER_PASS
+  - docker tag $IMAGE_NAME $IMAGE_NAME:$FIREFOX_VERSION
+  - docker push $IMAGE_NAME
