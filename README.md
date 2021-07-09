@@ -1,8 +1,6 @@
 # Node docker image with latest stable firefox
 
-[![Build Status](https://travis-ci.com/Romischart/node-firefox.svg?branch=master)](https://travis-ci.com/Romischart/node-firefox)
-
-> Fully dockerized latest stable firefox based on debian:buster-slim with nodejs & yarn preinstalled
+> Fully dockerized latest stable firefox based on [selenium/node-firefox](https://hub.docker.com/r/selenium/node-firefox) with nodejs & yarn preinstalled
 
 ## Why
 This project enables you to use a real firefox for example for e2e testing (with tools like testcafe) directly in CI.
